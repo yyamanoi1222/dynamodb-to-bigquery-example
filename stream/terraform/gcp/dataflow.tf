@@ -1,5 +1,4 @@
 resource "google_dataflow_job" "example" {
-  project                 = var.project
   name                    = "example"
   template_gcs_path       = "gs://dataflow-templates/latest/Stream_GCS_Text_to_BigQuery"
   temp_gcs_location       = "${google_storage_bucket.dataflow-tmp.url}/temp"

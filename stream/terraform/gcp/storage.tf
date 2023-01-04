@@ -2,7 +2,6 @@ resource "google_storage_bucket" "example" {
   name          = "dynamodb-to-bigquery-example"
   storage_class = "NEARLINE"
   location      = var.location
-  project       = var.project
 }
 
 resource "google_storage_bucket_iam_member" "example" {
@@ -16,5 +15,4 @@ resource "google_storage_bucket" "dataflow-tmp" {
   name          = "dynamodb-to-bigquery-example-dataflow-tmp"
   storage_class = "NEARLINE"
   location      = var.location
-  project       = var.project
 }
